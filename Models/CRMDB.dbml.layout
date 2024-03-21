@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CRMDB">
+  <DataContextMoniker Name="/CRMDBDataContext" />
+	<connectionStrings>
+		<add name="CRMDBConnectionString" connectionString="Data Source=DESKTOP-MSASH3U;Initial Catalog=CRMDB;Integrated Security=True;Encrypt=False"
+		  providerName="System.Data.SqlClient" />
+	</connectionStrings>
+  <nestedChildShapes>
+    <classShape Id="f871bd1e-f310-4323-8c6f-10b3d94a8780" absoluteBounds="1.875, 0.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/CRMDBDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5acaee6-e2d3-4936-b7b4-fd8c5dae2d3f" absoluteBounds="1.8900000000000001, 1.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d594041-8df7-42f0-ab40-8b499d35bdfb" absoluteBounds="2, 4.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CRMDBDataContext/user1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e92bd523-318d-4e10-bd97-6ad5bf93a986" absoluteBounds="2.015, 5.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

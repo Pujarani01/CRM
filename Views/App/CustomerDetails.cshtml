@@ -1,0 +1,89 @@
+﻿@model CRM.Models.Customer
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/75d4e502e9.js"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/Content/CustomerDetails.css" />
+    <title>Customer Details</title>
+    <style>
+        body{
+            font-size:20px;
+        }
+    </style>
+</head>
+
+<body>
+    @Html.Partial("_AppNavbar")
+    <h1>Customer Details</h1>
+    <div id="main-container">
+        <div id="first-div">
+            <div id="info-body">
+                <h2>Personal Details</h2>
+                <div id="card">
+                    <i class="fa-solid fa-user fa-lg"></i>
+                    <h4>Name:</h4>
+                    <h4>@Model.Name</h4>
+                </div>
+                <div id="card">
+                    <i class="fa-solid fa-envelope fa-lg"></i>
+                    <h4>Email:</h4>
+                    <h4>@Model.Email</h4>
+                </div>
+                <div id="card">
+                    <i class="fa-solid fa-user fa-lg"></i>
+                    <h4>City:</h4>
+                    <h4>@Model.City</h4>
+                </div>
+                <div id="card">
+                    <i class="fa-solid fa-envelope fa-lg"></i>
+                    <h4>Mobile:</h4>
+                    <h4>@Model.Mobile</h4>
+                </div>
+            </div>
+            <div id="engage-body">
+                <h2>Engagement Details</h2>
+                <div id="card">
+                    <i class="fa-solid fa-phone fa-lg"></i>
+                    <h4>Phone call:</h4>
+                    <h4>@Model.Phone_call</h4>
+                </div>
+                <div id="card">
+                    <i class="fa-solid fa-envelope fa-lg"></i>
+                    <h4>Email_ans:</h4>
+                    <h4>@Model.Email_ans</h4>
+                </div>
+                <div id="card">
+                    <i class="fa-solid fa-list fa-lg"></i>
+                    <h4>Open Isuue:</h4>
+                    <h4>@Model.Open_Issue</h4>
+                </div>
+                <div id="card">
+                    <i class="fa-solid fa-tty fa-lg"></i>
+                    <h4>Communication channel:</h4>
+                    <h4>@Model.Communication_channel</h4>
+                </div>
+            </div>
+        </div>
+        <div id="second-div">
+            <div id="sale-body">
+                <h2>Purchase History</h2>
+                <div id="card">
+                    <i class="fa-solid fa-indian-rupee-sign fa-lg"></i>
+                    <h4>Total Sale:</h4>
+                    <h4>@Model.Totalsale</h4>
+                </div>
+                <div id="card">
+                    <i class="fa-solid fa-indian-rupee-sign fa-lg"></i>
+                    <h4>Return/Cancellation:</h4>
+                    <h4>@Model.Return_cancellation</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

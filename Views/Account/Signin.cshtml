@@ -1,0 +1,60 @@
+﻿@model CRM.Models.user1
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Signin</title>
+    <style>
+        #txtsignin{
+            padding:15px 25px;
+            background-color:royalblue;
+            font-weight:bold;
+            color:white;
+            border-radius:10px;
+            margin-left:50px;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+   
+    @Html.Partial("_Navbar")
+    <h1 style="text-align:center;color:crimson">Signin</h1>
+    <div style="display:flex;justify-content:center;align-items:center">
+        @using (Html.BeginForm("Signin", "Account"))
+        {
+            <table>
+                <tr>
+                    <td><label>Name:</label></td>
+                    <td>@Html.TextBoxFor(U => U.Name)</td>
+                </tr>
+                <tr>
+                    <td><label>Email:</label></td>
+                    <td>@Html.TextBoxFor(U => U.Email)</td>
+                </tr>
+                <tr>
+                    <td><label>Password:</label></td>
+                    <td>@Html.TextBoxFor(U => U.Password)</td>
+                </tr>
+                <tr>
+                    <td><label> Confirm Password:</label></td>
+                    <td><input type="text" name="txtCpw" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><p>I have Registred <a href="/Account/Login" style="text-decoration:none;color:blue">Login</a></p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="signin" id="txtsignin" /></td>
+                </tr>
+            </table>
+        }
+
+    </div>
+    @Html.Partial("_Footer")
+</body>
+</html>

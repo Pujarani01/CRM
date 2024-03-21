@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Contactus</title>
+    <style>
+        #btnSubmit{
+            background-color:royalblue;
+            height:35px;
+            width:120px;
+            color:white;
+            border-radius:15px;
+            font-weight:bold;
+            box-shadow:0px 4px 8px inset;
+            border:none;
+        }
+        #btnReset {
+            background-color: royalblue;
+            height: 35px;
+            width: 120px;
+            color: white;
+            border-radius: 15px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px inset;
+            border: none;
+            margin-bottom: 20px;
+        }
+        form{
+            border:solid 1px grey;
+            box-shadow:0px 0px 4px 5px grey;
+          
+           
+
+        }
+        label{
+            margin-left:35px;
+            margin-top:30px;
+           
+        }
+    </style>
+</head>
+
+<body>
+    @Html.Partial("_Navbar")
+    <h1 style="text-align:center;color:crimson">Contact Us</h1>
+    <div style="display:flex;align-items:center;justify-content:center">
+
+        <form>
+            <label>Email:</label>
+            <input type="text" name="txtEmail" /><br /><br />
+            <label>Name:</label>
+            <input type="text" name="txtName" /><br /><br />
+            <label>Mobile:</label>
+            <input type="text" name="txtMobile" /><br /><br />
+            <label>Text:</label>
+            <textarea rows="3" cols="50" name="txtText"></textarea><br /><br />
+            <input type="submit" value="submit" id="btnSubmit" />
+            <input type="reset" value="reset" id="btnReset" />
+
+        </form>
+    </div>
+    @Html.Partial("_Footer")
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Settings</title>
+    <style>
+        a{
+           text-decoration:none;
+           font-size:25px;
+           font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+    @Html.Partial("_AppNavbar")
+    <h1 style="text-align:center;background-color:yellowgreen;color:orangered">Settings</h1>
+
+    <div style="display:flex;align-items:center;justify-content:center;flex-direction:column">
+        <a href="#" style="text-decoration:none">Password Reset</a>
+        <a href="#" style="text-decoration:none">Password Change</a>
+        <a href="#" style="text-decoration:none">Help</a>
+        <a href="#" style="text-decoration:none">FAQ</a>
+        @Html.ActionLink("Logout", "Login", "Account")
+    </div>
+</body>
+</html>

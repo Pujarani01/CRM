@@ -1,0 +1,68 @@
+﻿@model CRM.Models.Customer
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NewCustomer</title>
+    <style>
+        #submit-btn{
+            border:none;
+            padding:10px 20px;
+            background-color:#2F1C6A;
+            color:white;
+            font-weight:bold;
+            box-shadow:0px 0px 6px 2px rgba(0,0,0,0.5) inset;
+            border-radius:10px;
+        }
+         #input{
+             height:30px;
+             width:200px;
+
+        }
+        #form {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.5);
+            height:max-content;
+            width:550px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        label{
+            margin-left:20px;
+            
+        }
+    </style>
+</head>
+<body>
+    @Html.Partial("_AppNavbar")
+    <h1 style="text-align:center;color:crimson;text-decoration:underline">New Customer</h1>
+    <div id="form">
+
+        @using (Html.BeginForm("NewCustomer", "App"))
+        {
+            <label>Name:</label>
+            @Html.TextBoxFor(C => C.Name)<br /><br />
+            <label>Email:</label>
+            @Html.TextBoxFor(C => C.Email)<br /><br />
+            <label>Phone:</label>
+            @Html.TextBoxFor(C => C.Mobile)<br /><br />
+            <label>City:</label>
+            @Html.TextBoxFor(C => C.City)<br /><br />
+
+            <input type="text" name="UserId" value=@Session["Id"] style="display:none"/>
+            <input type="submit" value="Add Customer" style="margin-left:70px" id="submit-btn" />
+
+
+
+        }
+    </div>
+
+</body>
+</html>
